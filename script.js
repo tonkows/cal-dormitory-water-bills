@@ -16,7 +16,7 @@ function calculateAndDisplayChart() {
         const b = parseFloat(document.getElementById(`${month}B`).value) || 0;
         const c = parseFloat(document.getElementById(`${month}C`).value) || 0;
 
-        const sum = ((a - b) * c) * -1;
+        const sum = Math.max(((a - b) * c) * -1, 0);
 
         if (sum !== 0) {
             monthlyData[monthNames[i]] = sum;
