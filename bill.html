@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water Bill Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Water Bill Calculator (dormitory)</h1>
+        <form id="calcForm">
+            <div class="month-container">
+                <h2>Enter Monthly Water Usage Data</h2>
+                <h3>a : Water used last month</h3>
+                <h3>b : Water used this month</h3>
+                <h3>c : Price/Unit</h3>
+
+                <!-- January -->
+                <div class="month-entry">
+                    <h3>January</h3>
+                    <label for="janA">a:</label>
+                    <input type="number" id="janA" placeholder="Value for a" />
+                    <label for="janB">b:</label>
+                    <input type="number" id="janB" placeholder="Value for b" />
+                    <label for="janC">c:</label>
+                    <input type="number" id="janC" placeholder="Value for c" />
+                </div>
+
+                <!-- February -->
+                <div class="month-entry">
+                    <h3>February</h3>
+                    <label for="febA">a:</label>
+                    <input type="number" id="febA" placeholder="Value for a" />
+                    <label for="febB">b:</label>
+                    <input type="number" id="febB" placeholder="Value for b" />
+                    <label for="febC">c:</label>
+                    <input type="number" id="febC" placeholder="Value for c" />
+                </div>
+
+                <!-- March -->
+                <div class="month-entry">
+                    <h3>March</h3>
+                    <label for="marA">a:</label>
+                    <input type="number" id="marA" placeholder="Value for a" />
+                    <label for="marB">b:</label>
+                    <input type="number" id="marB" placeholder="Value for b" />
+                    <label for="marC">c:</label>
+                    <input type="number" id="marC" placeholder="Value for c" />
+                </div>
+
+                <!-- April -->
+                <div class="month-entry">
+                    <h3>April</h3>
+                    <label for="aprA">a:</label>
+                    <input type="number" id="aprA" placeholder="Value for a" />
+                    <label for="aprB">b:</label>
+                    <input type="number" id="aprB" placeholder="Value for b" />
+                    <label for="aprC">c:</label>
+                    <input type="number" id="aprC" placeholder="Value for c" />
+                </div>
+
+                <!-- May -->
+                <div class="month-entry">
+                    <h3>May</h3>
+                    <label for="mayA">a:</label>
+                    <input type="number" id="mayA" placeholder="Value for a" />
+                    <label for="mayB">b:</label>
+                    <input type="number" id="mayB" placeholder="Value for b" />
+                    <label for="mayC">c:</label>
+                    <input type="number" id="mayC" placeholder="Value for c" />
+                </div>
+
+                <!-- June -->
+                <div class="month-entry">
+                    <h3>June</h3>
+                    <label for="junA">a:</label>
+                    <input type="number" id="junA" placeholder="Value for a" />
+                    <label for="junB">b:</label>
+                    <input type="number" id="junB" placeholder="Value for b" />
+                    <label for="junC">c:</label>
+                    <input type="number" id="junC" placeholder="Value for c" />
+                </div>
+
+                <!-- July -->
+                <div class="month-entry">
+                    <h3>July</h3>
+                    <label for="julA">a:</label>
+                    <input type="number" id="julA" placeholder="Value for a" />
+                    <label for="julB">b:</label>
+                    <input type="number" id="julB" placeholder="Value for b" />
+                    <label for="julC">c:</label>
+                    <input type="number" id="julC" placeholder="Value for c" />
+                </div>
+
+                <!-- August -->
+                <div class="month-entry">
+                    <h3>August</h3>
+                    <label for="augA">a:</label>
+                    <input type="number" id="augA" placeholder="Value for a" />
+                    <label for="augB">b:</label>
+                    <input type="number" id="augB" placeholder="Value for b" />
+                    <label for="augC">c:</label>
+                    <input type="number" id="augC" placeholder="Value for c" />
+                </div>
+
+                <!-- September -->
+                <div class="month-entry">
+                    <h3>September</h3>
+                    <label for="sepA">a:</label>
+                    <input type="number" id="sepA" placeholder="Value for a" />
+                    <label for="sepB">b:</label>
+                    <input type="number" id="sepB" placeholder="Value for b" />
+                    <label for="sepC">c:</label>
+                    <input type="number" id="sepC" placeholder="Value for c" />
+                </div>
+
+                <!-- October -->
+                <div class="month-entry">
+                    <h3>October</h3>
+                    <label for="octA">a:</label>
+                    <input type="number" id="octA" placeholder="Value for a" />
+                    <label for="octB">b:</label>
+                    <input type="number" id="octB" placeholder="Value for b" />
+                    <label for="octC">c:</label>
+                    <input type="number" id="octC" placeholder="Value for c" />
+                </div>
+
+                <!-- November -->
+                <div class="month-entry">
+                    <h3>November</h3>
+                    <label for="novA">a:</label>
+                    <input type="number" id="novA" placeholder="Value for a" />
+                    <label for="novB">b:</label>
+                    <input type="number" id="novB" placeholder="Value for b" />
+                    <label for="novC">c:</label>
+                    <input type="number" id="novC" placeholder="Value for c" />
+                </div>
+
+                <!-- December -->
+                <div class="month-entry">
+                    <h3>December</h3>
+                    <label for="decA">a:</label>
+                    <input type="number" id="decA" placeholder="Value for a" />
+                    <label for="decB">b:</label>
+                    <input type="number" id="decB" placeholder="Value for b" />
+                    <label for="decC">c:</label>
+                    <input type="number" id="decC" placeholder="Value for c" />
+                </div>
+            </div>
+
+            <button type="button" onclick="calculateAndDisplayChart()">
+                Show Chart
+            </button>
+        </form>
+
+        <div>
+            <h2>Monthly Water Usage Chart</h2>
+            <canvas id="waterUsageChart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
