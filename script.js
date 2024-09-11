@@ -12,9 +12,13 @@ function calculateAndDisplayChart() {
 
     for (let i = 0; i < months.length; i++) {
         const month = months[i];
-        const a = parseFloat(document.getElementById(`${month}A`).value) || 0;
-        const b = parseFloat(document.getElementById(`${month}B`).value) || 0;
-        const c = parseFloat(document.getElementById(`${month}C`).value) || 0;
+        let a = parseFloat(document.getElementById(`${month}A`).value) || 0;
+        let b = parseFloat(document.getElementById(`${month}B`).value) || 0;
+        let c = parseFloat(document.getElementById(`${month}C`).value) || 0;
+
+        a = Math.max(a, 0);
+        b = Math.max(b, 0);
+        c = Math.max(c, 0);
 
         const sum = Math.max(((a - b) * c) * -1, 0);
 
@@ -29,6 +33,7 @@ function calculateAndDisplayChart() {
 function updateChart(data) {
     const ctx = document.getElementById('waterUsageChart').getContext('2d');
 
+
     if (waterUsageChart) {
         waterUsageChart.destroy();
     }
@@ -36,7 +41,7 @@ function updateChart(data) {
     const labels = Object.keys(data);
     const dataset = Object.values(data);
 
-    // Create a new chart
+
     waterUsageChart = new Chart(ctx, {
         type: 'bar',
         data: {
