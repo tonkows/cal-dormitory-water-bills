@@ -1,4 +1,4 @@
-let waterUsageChart;  // ประกาศตัวแปร waterUsageChart ในระดับ global
+let waterUsageChart;  
 
 function calculateAndDisplayChart() {
     const months = [
@@ -16,7 +16,6 @@ function calculateAndDisplayChart() {
         const b = parseFloat(document.getElementById(`${month}B`).value) || 0;
         const c = parseFloat(document.getElementById(`${month}C`).value) || 0;
 
-        // Calculate water usage cost
         const sum = ((a - b) * c) * -1;
 
         if (sum !== 0) {
